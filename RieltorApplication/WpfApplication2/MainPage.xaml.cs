@@ -78,6 +78,7 @@ namespace RieltorApplication
                          (Region.SelectedIndex != 0 ? row.RegionId == Region.SelectedIndex : true) &&
                          (Type.SelectedIndex != 0 ? row.TypeId == Type.SelectedIndex : true) &&
                          (Subway.SelectedIndex != 0 ? row.SubwayId == Subway.SelectedIndex : true) &&
+                         (numRooms.Text != "" ? row.Rooms == Convert.ToInt32(numRooms.Text) : true) &&
                          (maxPrice.Text != "" ? row.Price <= Convert.ToInt32(maxPrice.Text) : true) &&
                          (minPrice.Text != "" ? row.Price >= Convert.ToInt32(minPrice.Text) : true)
                          select row.Name;
