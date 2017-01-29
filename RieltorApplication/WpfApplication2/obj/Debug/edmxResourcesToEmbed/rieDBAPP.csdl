@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rieDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Apartment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Region" Relationship="rieDBModel.ApartmentRegion" FromRole="Apartment" ToRole="Region" />
+    <Property Name="RegionId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Type" Relationship="rieDBModel.ApartmentType" FromRole="Apartment" ToRole="Type" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Subway" Relationship="rieDBModel.ApartmentSubway" FromRole="Apartment" ToRole="Subway" />
+    <Property Name="SubwayId" Type="Int32" Nullable="true" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Square" Type="Int32" Nullable="false" />
+    <Property Name="SquareLiving" Type="Int32" Nullable="true" />
+    <Property Name="SquareKitchen" Type="Int32" Nullable="true" />
+    <Property Name="Floor" Type="Int16" Nullable="false" />
+    <Property Name="Elevator" Type="Boolean" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="toSubway" Type="Int32" Nullable="true" />
+    <Property Name="Improvment" Type="Boolean" Nullable="false" />
+    <Property Name="Parking" Type="Boolean" Nullable="false" />
+    <Property Name="Rooms" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Apartments" Relationship="rieDBModel.ApartmentRegion" FromRole="Region" ToRole="Apartment" />
+  </EntityType>
+  <EntityType Name="Subway">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Apartments" Relationship="rieDBModel.ApartmentSubway" FromRole="Subway" ToRole="Apartment" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Apartments" Relationship="rieDBModel.ApartmentType" FromRole="Type" ToRole="Apartment" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Admin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="rieDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apartment" EntityType="Self.Apartment" />
+    <EntitySet Name="Region" EntityType="Self.Region" />
+    <EntitySet Name="Subway" EntityType="Self.Subway" />
+    <EntitySet Name="Type" EntityType="Self.Type" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="ApartmentRegion" Association="rieDBModel.ApartmentRegion">
+      <End Role="Apartment" EntitySet="Apartment" />
+      <End Role="Region" EntitySet="Region" />
+    </AssociationSet>
+    <AssociationSet Name="ApartmentType" Association="rieDBModel.ApartmentType">
+      <End Role="Apartment" EntitySet="Apartment" />
+      <End Role="Type" EntitySet="Type" />
+    </AssociationSet>
+    <AssociationSet Name="ApartmentSubway" Association="rieDBModel.ApartmentSubway">
+      <End Role="Apartment" EntitySet="Apartment" />
+      <End Role="Subway" EntitySet="Subway" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="ApartmentRegion">
+    <End Type="rieDBModel.Apartment" Role="Apartment" Multiplicity="*" />
+    <End Type="rieDBModel.Region" Role="Region" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ApartmentType">
+    <End Type="rieDBModel.Apartment" Role="Apartment" Multiplicity="*" />
+    <End Type="rieDBModel.Type" Role="Type" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ApartmentSubway">
+    <End Type="rieDBModel.Apartment" Role="Apartment" Multiplicity="*" />
+    <End Type="rieDBModel.Subway" Role="Subway" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Subway">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="SubwayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

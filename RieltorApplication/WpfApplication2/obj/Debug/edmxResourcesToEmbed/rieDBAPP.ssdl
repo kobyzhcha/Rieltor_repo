@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="rieDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="rieDBModelStoreContainer">
+    <EntitySet Name="Apartments" EntityType="rieDBModel.Store.Apartments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Regions" EntityType="rieDBModel.Store.Regions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subways" EntityType="rieDBModel.Store.Subways" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Types" EntityType="rieDBModel.Store.Types" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="rieDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ApartmentRegion" Association="rieDBModel.Store.ApartmentRegion">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Region" EntitySet="Regions" />
+    </AssociationSet>
+    <AssociationSet Name="ApartmentType" Association="rieDBModel.Store.ApartmentType">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Type" EntitySet="Types" />
+    </AssociationSet>
+    <AssociationSet Name="ApartmentSubway" Association="rieDBModel.Store.ApartmentSubway">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Subway" EntitySet="Subways" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Apartments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionId" Type="int" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="SubwayId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subways">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Types">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Admin" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="ApartmentRegion">
+    <End Role="Apartment" Type="rieDBModel.Store.Apartments" Multiplicity="*" />
+    <End Role="Region" Type="rieDBModel.Store.Regions" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ApartmentType">
+    <End Role="Apartment" Type="rieDBModel.Store.Apartments" Multiplicity="*" />
+    <End Role="Type" Type="rieDBModel.Store.Types" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ApartmentSubway">
+    <End Role="Apartment" Type="rieDBModel.Store.Apartments" Multiplicity="*" />
+    <End Role="Subway" Type="rieDBModel.Store.Subways" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Subway">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="SubwayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
