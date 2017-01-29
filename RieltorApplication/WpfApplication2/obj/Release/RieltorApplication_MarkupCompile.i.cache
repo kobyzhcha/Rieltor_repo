@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Release\
+C:\git\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Release\
 RieltorApplication
 none
 false
 TRACE
-C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\App.xaml
+C:\git\Rieltor_repo\RieltorApplication\WpfApplication2\App.xaml
 9-1925986990
 21750853300
-262041313939
-18-1967526760
+26-2091082382
+181841134652
 addWindow.xaml;deleteWindow.xaml;DescriptionWindow.xaml;LoginPage.xaml;MainPage.xaml;MainWindow.xaml;UserManagementPage.xaml;UserRegistrationPage.xaml;Users.xaml;
 
 True

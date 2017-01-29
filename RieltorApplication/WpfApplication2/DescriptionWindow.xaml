@@ -27,6 +27,6 @@
         <Label x:Name="label" Content="Почта:" HorizontalAlignment="Left" Margin="328,281,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="14"/>
         <Label x:Name="label1" Content="Номер:" HorizontalAlignment="Left" Margin="324,307,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="14"/>
         <TextBlock x:Name="mail" HorizontalAlignment="Left" Margin="389,286,0,0" TextWrapping="Wrap" Text="igorkobyhcha@gmail.com" VerticalAlignment="Top" Width="174" Height="21" Foreground="Black" FontSize="14" TextDecorations="{x:Null}"/>
-        <TextBlock x:Name="number" HorizontalAlignment="Left" Margin="389,312,0,0" TextWrapping="Wrap" Text="78558-96-82" VerticalAlignment="Top" Width="174" Height="21" Foreground="Black" FontSize="14" TextDecorations="{x:Null}"/>
+        <TextBlock x:Name="number" HorizontalAlignment="Left" Margin="389,312,0,0" TextWrapping="Wrap" Text="78-96-82" VerticalAlignment="Top" Width="174" Height="21" Foreground="Black" FontSize="14" TextDecorations="{x:Null}"/>
     </Grid>
 </Window>
