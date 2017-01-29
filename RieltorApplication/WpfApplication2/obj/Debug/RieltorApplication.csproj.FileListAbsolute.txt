@@ -87,3 +87,38 @@ C:\Users\kobyzhcha\Documents\Visual Studio 2015\Projects\RieltorApplication\WpfA
 C:\Users\kobyzhcha\Documents\Visual Studio 2015\Projects\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.g.resources
 C:\Users\kobyzhcha\Documents\Visual Studio 2015\Projects\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.Properties.Resources.resources
 C:\Users\kobyzhcha\Documents\Visual Studio 2015\Projects\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.csproj.GenerateResource.Cache
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\RieltorApplication.exe.config
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.exe
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.pdb
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\RieltorApplication.exe
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\RieltorApplication.pdb
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\EntityFramework.dll
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\EntityFramework.xml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.csprojResolveAssemblyReference.cache
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\addWindow.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\deleteWindow.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\DescriptionWindow.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\LoginPage.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\MainPage.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\UserManagementPage.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\UserRegistrationPage.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\Users.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication_Content.g.cs
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication_MarkupCompile.cache
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication_MarkupCompile.lref
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\addWindow.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\deleteWindow.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\DescriptionWindow.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\LoginPage.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\MainPage.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\UserManagementPage.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\UserRegistrationPage.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\Users.baml
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.g.resources
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.Properties.Resources.resources
+C:\Users\Palaniza\Source\Repos\Rieltor_repo\RieltorApplication\WpfApplication2\obj\Debug\RieltorApplication.csproj.GenerateResource.Cache
